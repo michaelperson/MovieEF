@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieEF", "MovieEF\MovieEF.csproj", "{03F0A01B-04F4-48BF-AD42-2DDF615CDA7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieEF.DAL", "MovieEF.DAL\MovieEF.DAL.csproj", "{B6810AB8-6092-4F38-BC18-D565E5614A46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03F0A01B-04F4-48BF-AD42-2DDF615CDA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F0A01B-04F4-48BF-AD42-2DDF615CDA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F0A01B-04F4-48BF-AD42-2DDF615CDA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F0A01B-04F4-48BF-AD42-2DDF615CDA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6810AB8-6092-4F38-BC18-D565E5614A46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6810AB8-6092-4F38-BC18-D565E5614A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6810AB8-6092-4F38-BC18-D565E5614A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6810AB8-6092-4F38-BC18-D565E5614A46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEE1BF63-CF14-416E-B2A2-AE49B31DDED1}
+	EndGlobalSection
+EndGlobal
