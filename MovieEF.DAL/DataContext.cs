@@ -15,6 +15,9 @@ namespace MovieEF.DAL
     {
         #region DbSet
             public DbSet<Film> Films { get; set; }
+        public DbSet<Acteur> Acteurs { get; set; }
+        public DbSet<Realisateur> Realisateurs { get; set; }
+        //public DbSet<Personne> Personnes { get; set; }
         #endregion
 
 
@@ -33,7 +36,19 @@ namespace MovieEF.DAL
             // new FilmConfig().Configure(modelBuilder.Entity<Film>());        
             modelBuilder.ApplyConfiguration(new FilmConfig());
             //Pour le dataset
-            modelBuilder.ApplyConfiguration(new DataSet());
+           // modelBuilder.ApplyConfiguration(new DataSet());
+
+
+
+           
+
+            //Pour les personnes et les acteurs et les réalisateurs
+            //modelBuilder.ApplyConfiguration(new PersonneConfig());
+            modelBuilder.ApplyConfiguration(new ActeurConfig());
+            modelBuilder.ApplyConfiguration(new RealisateurConfig());
+
+            //Apliquer la réalision n-n
+             modelBuilder.ApplyConfiguration(new FilmActeurConfig());
         }
     }
 }

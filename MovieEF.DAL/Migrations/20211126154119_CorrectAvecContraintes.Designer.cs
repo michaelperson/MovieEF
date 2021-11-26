@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieEF.DAL;
 
 namespace MovieEF.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20211126154119_CorrectAvecContraintes")]
+    partial class CorrectAvecContraintes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +23,7 @@ namespace MovieEF.DAL.Migrations
 
             modelBuilder.Entity("MovieEF.DAL.Entities.Acteur", b =>
                 {
-                    b.Property<int>("IdPersonne")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -37,7 +39,7 @@ namespace MovieEF.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdPersonne");
+                    b.HasKey("Id");
 
                     b.ToTable("Acteurs");
                 });
@@ -62,7 +64,7 @@ namespace MovieEF.DAL.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("RealisateurIdPersonne")
+                    b.Property<int?>("RealisateurId")
                         .HasColumnType("int");
 
                     b.Property<string>("Titre")
@@ -74,7 +76,7 @@ namespace MovieEF.DAL.Migrations
 
                     b.HasKey("FilmId");
 
-                    b.HasIndex("RealisateurIdPersonne");
+                    b.HasIndex("RealisateurId");
 
                     b.HasIndex("Titre")
                         .IsUnique();
@@ -101,7 +103,7 @@ namespace MovieEF.DAL.Migrations
 
             modelBuilder.Entity("MovieEF.DAL.Entities.Realisateur", b =>
                 {
-                    b.Property<int>("IdPersonne")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -117,7 +119,7 @@ namespace MovieEF.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdPersonne");
+                    b.HasKey("Id");
 
                     b.ToTable("Realisateurs");
                 });
@@ -126,7 +128,7 @@ namespace MovieEF.DAL.Migrations
                 {
                     b.HasOne("MovieEF.DAL.Entities.Realisateur", "Realisateur")
                         .WithMany("Films")
-                        .HasForeignKey("RealisateurIdPersonne");
+                        .HasForeignKey("RealisateurId");
 
                     b.Navigation("Realisateur");
                 });

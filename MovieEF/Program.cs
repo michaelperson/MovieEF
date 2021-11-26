@@ -17,12 +17,38 @@ namespace MovieEF
 
             using(DataContext dc = new DataContext())
             {
+                Console.WriteLine("Création d'un acteur");
+
+                Acteur Actor = new Acteur()
+                {
+                    Nom = "Reinolds",
+                    Prenom = "Ryan",
+                    Oscars = 52
+                };
+
+                dc.Acteurs.Add(Actor);
+                Realisateur Rea = new Realisateur()
+                {
+                    Nom = "Spielberg",
+                    Prenom = "Steven",
+                    LongBarbe=37.5
+                };
+
+                dc.Realisateurs.Add(Rea);
+                dc.SaveChanges();
+
+                List<Acteur> la = dc.Acteurs.ToList();
+                List<Realisateur> lr = dc.Realisateurs.ToList();
+                List<Personne> lp = new List<Personne>();
+                lp.AddRange(la);
+                lp.AddRange(lr);
+
             Console.WriteLine("Ajout de Pacific Rim");
             Film FPAcific = new Film()
             {
                 ActeurPrincipal = "Charlie Hunnam",
                 Annee = 2013,
-                Realisateur = "Guillermo Del Toro",
+                Realisateur = new Realisateur() { Nom="Del Toro", Prenom="Guillermo" },
                 Genre = "Action",
                 Titre = "Pacific Rim"
             };

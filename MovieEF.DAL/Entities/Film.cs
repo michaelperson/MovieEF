@@ -11,9 +11,9 @@ namespace MovieEF.DAL.Entities
         public int FilmId { get; set; }
         public string Titre { get; set; }
         public int Annee { get; set; }
-        public string Realisateur { get; set; }
+        public Realisateur Realisateur { get; set; }
         public string ActeurPrincipal { get; set; }
-
+        public IEnumerable<FilmActeur> FActeurs { get; set; }
         public string Genre { get; set; }
 
     }

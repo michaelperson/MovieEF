@@ -21,7 +21,7 @@ namespace MovieEF.DAL.Datasets
                     Annee = 1977,
                     ActeurPrincipal = "Mark Hammil",
                     Genre = "Science-Fiction",
-                    Realisateur = "Georges Lucas"
+                    Realisateur = new Realisateur() { Nom = "Lucas", Prenom = "Georges" }
                 },
                 new Film
                 {
@@ -30,7 +30,7 @@ namespace MovieEF.DAL.Datasets
                     Annee = 1980,
                     ActeurPrincipal = "Mark Hammil",
                     Genre = "Science-Fiction",
-                    Realisateur = "Georges Lucas"
+                    Realisateur = new Realisateur() { Nom = "Lucas", Prenom = "Georges" }
                 },
                 new Film
                 {
@@ -39,7 +39,7 @@ namespace MovieEF.DAL.Datasets
                     Annee = 1983,
                     ActeurPrincipal = "Mark Hammil",
                     Genre = "Science-Fiction",
-                    Realisateur = "Georges Lucas"
+                    Realisateur = new Realisateur() { Nom = "Lucas", Prenom = "Georges" }
                 },
                 new Film
                 {
@@ -48,7 +48,7 @@ namespace MovieEF.DAL.Datasets
                     Annee = 2005,
                     ActeurPrincipal = "Charlie Hunnam",
                     Genre = "Société",
-                    Realisateur = "Lexi Alexander"
+                    Realisateur = new Realisateur() { Nom = "Alexander", Prenom = "Alexi" } 
                 },
                 new Film
                 {
@@ -57,7 +57,7 @@ namespace MovieEF.DAL.Datasets
                     Annee = 2001,
                     ActeurPrincipal = "Elijah Wood",
                     Genre = "Heroic-Fantasy",
-                    Realisateur = "Peter Jackson"
+                    Realisateur = new Realisateur() { Nom = "Jackson", Prenom = "Peter" } 
                 },
                 new Film
                 {
@@ -66,7 +66,7 @@ namespace MovieEF.DAL.Datasets
                     Annee = 2002,
                     ActeurPrincipal = "Elijah Wood",
                     Genre = "Heroic-Fantasy",
-                    Realisateur = "Peter Jackson"
+                    Realisateur = new Realisateur() { Nom = "Jackson", Prenom = "Peter" }
                 },
                 new Film
                 {
@@ -75,7 +75,7 @@ namespace MovieEF.DAL.Datasets
                     Annee = 2003,
                     ActeurPrincipal = "Elijah Wood",
                     Genre = "Heroic-Fantasy",
-                    Realisateur = "Peter Jackson"
+                    Realisateur = new Realisateur() { Nom = "Jackson", Prenom = "Peter" }
                 }
                 );
         }

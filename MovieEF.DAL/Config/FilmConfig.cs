@@ -27,13 +27,19 @@ namespace MovieEF.DAL.Config
             //La non nullité
             builder.Property(x => x.Titre).IsRequired().HasMaxLength(100).HasDefaultValue("");
             builder.Property(x => x.Annee).IsRequired();
-            builder.Property(x => x.Realisateur).IsRequired().HasMaxLength(100);
+           // builder.Property(x => x.Realisateur).IsRequired().HasMaxLength(100);
             builder.Property(x => x.ActeurPrincipal).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Genre).IsRequired().HasMaxLength(100);
 
-            //LA contrainte sur l'année 
+            //La contrainte sur l'année 
             builder.HasCheckConstraint("Chk_AnneeDeSortie", "Annee>1975");
 
+            //Ajout des relations
+            builder.HasOne<Realisateur>(f => f.Realisateur).WithMany(R => R.Films);
+
+           
+
+         
          
 
         }
